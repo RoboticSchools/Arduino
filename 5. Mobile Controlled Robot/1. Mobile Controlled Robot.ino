@@ -5,8 +5,8 @@ SoftwareSerial mySerial(2, 3); // RX, TX
 
 AF_DCMotor motor1(2, MOTOR12_64KHZ); // create motor object, 64KHz pwm
 AF_DCMotor motor2(3, MOTOR12_64KHZ); // create motor object, 64KHz pwm
-AF_DCMotor motor3(4, MOTOR12_64KHZ); // create motor object, 64KHz pwm
-AF_DCMotor motor4(1, MOTOR12_64KHZ); // create motor object, 64KHz pwm
+AF_DCMotor motor3(1, MOTOR12_64KHZ); // create motor object, 64KHz pwm
+AF_DCMotor motor4(4, MOTOR12_64KHZ); // create motor object, 64KHz pwm
 
 int state;
 int Speed = 130; 
