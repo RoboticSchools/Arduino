@@ -1,5 +1,5 @@
 
-int led = 8;
+int led = 13;
 int ldr = 7;
 void setup()
 {
