@@ -58,7 +58,7 @@ else if(state == 4)
   motor3.run(FORWARD);
   motor4.run(BACKWARD); 
 }
-else:
+else if (state == 5)
   motor1.run(RELEASE);
   motor2.run(RELEASE);
   motor3.run(RELEASE);
