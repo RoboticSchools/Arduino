@@ -1,7 +1,7 @@
 
 #include<SoftwareSerial.h>
 SoftwareSerial myserial(2,3);
-int led =9;
+int led = 7;
 
 void setup()
 {
