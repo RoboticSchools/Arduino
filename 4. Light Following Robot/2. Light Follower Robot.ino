@@ -16,10 +16,10 @@ void setup() {
   pinMode(rights,INPUT);
 
   Serial.begin(9600);
-  motor1.setSpeed(speed);
-  motor2.setSpeed(speed);
-  motor3.setSpeed(speed);
-  motor4.setSpeed(speed);
+  motorR1.setSpeed(speed);
+  motorR2.setSpeed(speed);
+  motorL1.setSpeed(speed);
+  motorL2.setSpeed(speed);
     
 }
 
