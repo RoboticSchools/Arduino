@@ -5,10 +5,10 @@
 
 int speed = 200;
 
-AF_DCMotor motor1(2, MOTOR12_8KHZ);  // RightHand Side - Front Motor
-AF_DCMotor motor2(3, MOTOR12_8KHZ);  // LeftHand Side - Front Motor
-AF_DCMotor motor3(1, MOTOR12_8KHZ);  // RightHand Side - Back Motor
-AF_DCMotor motor4(4, MOTOR12_8KHZ);  // LeftHand Side - Back Motor
+AF_DCMotor motorR1(2);  // RightHand Side - Front Motor
+AF_DCMotor motorR2(3);  // LeftHand Side - Front Motor
+AF_DCMotor motorL1(1);  // RightHand Side - Back Motor
+AF_DCMotor motorL2(4);  // LeftHand Side - Back Motor
 
 void setup() {
 
@@ -30,38 +30,38 @@ void loop(){
  
   if(digitalRead(lefts)==0 && digitalRead(rights)==0){
     
-    motor1.run(FORWARD);
-    motor2.run(FORWARD);   
-    motor3.run(FORWARD);
-    motor4.run(FORWARD);
+    motorR1.run(FORWARD);
+    motorR2.run(FORWARD);   
+    motorL1.run(FORWARD);
+    motorL2.run(FORWARD);
     
   }
   
   else if(digitalRead(lefts)==1 && digitalRead(rights)==0){
 
-    motor1.run(BACKWARD);
-    motor2.run(FORWARD);
-    motor3.run(BACKWARD);     
-    motor4.run(FORWARD);
+    motorR1.run(BACKWARD);
+    motorR2.run(BACKWARD);
+    motorL1.run(FORWARD);     
+    motorL2.run(FORWARD);
     
   }
   
   else if(digitalRead(lefts)==0 && digitalRead(rights)==1){;
 
 
-    motor1.run(FORWARD);
-    motor2.run(BACKWARD);
-    motor3.run(FORWARD);   
-    motor4.run(BACKWARD);
+    motorR1.run(FORWARD);
+    motorR2.run(FORWARD);
+    motorL1.run(BACKWARD);   
+    motorL2.run(BACKWARD);
 
   }
 
   else if(digitalRead(lefts)==1 && digitalRead(rights)==1){
     
-    motor1.run(RELEASE);
-    motor2.run(RELEASE);  
-    motor3.run(RELEASE);
-    motor4.run(RELEASE);
+    motorR1.run(RELEASE);
+    motorR2.run(RELEASE);  
+    motorL1.run(RELEASE);
+    motorL2.run(RELEASE);
 
   }
   
