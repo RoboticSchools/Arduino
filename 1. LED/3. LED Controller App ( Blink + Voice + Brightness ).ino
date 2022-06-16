@@ -1,7 +1,7 @@
 
 #include<SoftwareSerial.h>
 SoftwareSerial myserial(2,3);
-int led =9;
+int led = 7;
 
 void setup()
 {
@@ -23,7 +23,7 @@ void loop()
     {
      digitalWrite(led,LOW);
     }
-    else if(data>2)
+    else if(data > 2)
     {
       int brightness = data;
       Serial.println(brightness);
