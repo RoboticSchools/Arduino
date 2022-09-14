@@ -1,29 +1,20 @@
-// www.roboticschools.com
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
 
-#include <Adafruit_LiquidCrystal.h>
-
-int Numbers = 0;
-
-Adafruit_LiquidCrystal lcd_1(0);
+// Set the LCD address to 0x27 for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 void setup()
 {
-  lcd_1.begin(16, 2);
+	// initialize the LCD
+	lcd.begin();
 
-  Numbers = 0;
-  lcd_1.setCursor(0, 0);
-  lcd_1.print("Hello ...");
-  delay(1000); // Wait for 1000 millisecond(s)
-  lcd_1.setCursor(0, 1);
-  lcd_1.print("RoboticSchools");
-  delay(1000); // Wait for 1000 millisecond(s)
-  lcd_1.clear();
+	// Turn on the blacklight and print a message.
+	lcd.backlight();
+	lcd.print("Hello, world!");
 }
 
 void loop()
 {
-  Numbers += 1;
-  lcd_1.setCursor(0, 0);
-  lcd_1.print(Numbers);
-  delay(1000); // Wait for 1000 millisecond(s)
+	// Do nothing here...
 }
