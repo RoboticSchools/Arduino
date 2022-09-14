@@ -1,5 +1,5 @@
-// C++ code
-//
+//www.roboticschools.com
+
 int sensor = 0;
 
 void setup()
