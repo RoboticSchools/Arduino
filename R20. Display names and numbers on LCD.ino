@@ -1,5 +1,5 @@
-// C++ code
-//
+// www.roboticschools.com
+
 #include <Adafruit_LiquidCrystal.h>
 
 int Numbers = 0;
