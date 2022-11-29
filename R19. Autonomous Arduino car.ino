@@ -61,6 +61,8 @@ long data(){
   delayMicroseconds(2);
   digitalWrite(trigpin, HIGH);
   delayMicroseconds(10);
+ digitalWrite(trigpin, LOW);
+ 
   duration = pulseIn (echopin, HIGH);
-  return duration / 29 / 2;
+  return 0.0343*duration/2;
 }
