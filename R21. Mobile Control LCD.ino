@@ -1,30 +1,27 @@
+/// ADD THIS LIBRARY ---->  https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library
+
+#include<SoftwareSerial.h>
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-// Set the LCD address to 0x27 for a 16 chars and 2 line display
+SoftwareSerial blue(2,3);
+
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 void setup()
 {
 	lcd.begin();
-	lcd.backlight();
-  
-	// Initialize the serial port at a speed of 9600 baud
-	Serial.begin(9600);
+  blue.begin(9600);
+	lcd.clear();
 }
 
 void loop()
 {
-	// If characters arrived over the serial port...
-	if (Serial.available()) {
-		// Wait a bit for the entire message to arrive
-		delay(100);
-		// Clear the screen
-		lcd.clear();
-
-		// Write all characters received with the serial port to the LCD.
-		while (Serial.available() > 0) {
-			lcd.write(Serial.read());
-		}
-	}
+  if(blue.available()>0)
+  {
+    String msg = blue.readString();
+    lcd.setCursor(0,0);
+    lcd.clear();
+    lcd.print(msg);
+  }  
 }
