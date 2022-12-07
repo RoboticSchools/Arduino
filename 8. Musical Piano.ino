@@ -1,16 +1,15 @@
 //www.roboticschools.com
 
-int pos = 0;
-
 void setup()
 {
   pinMode(A0, INPUT);
-  pinMode(8, OUTPUT);
   pinMode(A1, INPUT);
   pinMode(A2, INPUT);
   pinMode(A3, INPUT);
   pinMode(A4, INPUT);
   pinMode(A5, INPUT);
+  
+  pinMode(8, OUTPUT);
 }
 
 void loop()
