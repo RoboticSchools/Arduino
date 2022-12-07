@@ -3,8 +3,8 @@
 #include <AFMotor.h> 
  
 AF_DCMotor motorR1(2);
-AF_DCMotor motorR2(3);
-AF_DCMotor motorL1(1);
+AF_DCMotor motorR2(1);
+AF_DCMotor motorL1(3);
 AF_DCMotor motorL2(4);
 
 int Speed = 180; 
