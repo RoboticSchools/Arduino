@@ -3,7 +3,7 @@
 #include <AFMotor.h>
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(2, 3); // RX, TX
+SoftwareSerial blue(2, 3); // RX, TX
 
 AF_DCMotor motorR1(2); 
 AF_DCMotor motorR2(3); 
@@ -21,14 +21,14 @@ motorL1.setSpeed(Speed);
 motorL2.setSpeed(Speed);
   
 Serial.begin(9600);
-mySerial.begin(9600);
+blue.begin(9600);
 delay(500); 
 }
 
 void loop(){   
-if(mySerial.available() > 0)  //if some date is sent, reads it and saves in state
+if(blue.available() > 0)  //if some date is sent, reads it and saves in state
 {
-  state = mySerial.read();      
+  state = blue.read();      
   if(state > 10)
 {
   Speed = state;
