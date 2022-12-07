@@ -1,7 +1,5 @@
 // www.roboticschools.com
 
-int button = 0;
-
 void setup()
 {
   pinMode(3, INPUT);
@@ -12,7 +10,7 @@ void setup()
 
 void loop()
 {
-  button = digitalRead(3);
+  int button = digitalRead(3);
   if (button == 1) {
     analogWrite(11, random(0, 255 + 1));
     analogWrite(9, random(0, 255 + 1));
