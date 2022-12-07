@@ -10,9 +10,9 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 void setup()
 {
-	lcd.begin();
+  lcd.begin();
   blue.begin(9600);
-	lcd.clear();
+  lcd.clear();
 }
 
 void loop()
