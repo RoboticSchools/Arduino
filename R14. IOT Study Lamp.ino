@@ -1,7 +1,5 @@
 //www.roboticschools.com
 
-int sensor = 0;
-
 void setup()
 {
   pinMode(7, INPUT);
@@ -11,7 +9,7 @@ void setup()
 
 void loop()
 {
-  sensor = digitalRead(7);
+  int sensor = digitalRead(7);
   Serial.println(sensor);
   if (sensor == 0) {
     digitalWrite(8, HIGH);
