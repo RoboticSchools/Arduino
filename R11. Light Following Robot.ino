@@ -6,8 +6,8 @@
 #define right A0 
 
 AF_DCMotor motorR1(2);  // RightHand Side - Front Motor
-AF_DCMotor motorR2(3);  // LeftHand Side - Front Motor
-AF_DCMotor motorL1(1);  // RightHand Side - Back Motor
+AF_DCMotor motorR2(1);  // LeftHand Side - Front Motor
+AF_DCMotor motorL1(3);  // RightHand Side - Back Motor
 AF_DCMotor motorL2(4);  // LeftHand Side - Back Motor
 
 int speed = 180;
