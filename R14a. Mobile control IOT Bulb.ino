@@ -2,7 +2,7 @@
 
 #include<SoftwareSerial.h>
 
-SoftwareSerial blue;
+SoftwareSerial blue(2,3);
 
 void setup()
 {
