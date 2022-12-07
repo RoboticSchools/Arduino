@@ -27,7 +27,7 @@ void loop()
   
   if (distance < 20) 
   {
-    motor.write(150);
+    motor.write(120);
   } 
   else 
   {
