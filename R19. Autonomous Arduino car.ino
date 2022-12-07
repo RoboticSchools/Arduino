@@ -3,13 +3,10 @@
 #define echopin A5 // echo pin  --- Change these two numbers to respective numbers those are connected in Arduino.
 #define trigpin A4 // Trigger pin
 
- 
-
 AF_DCMotor motorR1(2); // RightHand Side - Front Motor
 AF_DCMotor motorR2(3); // LeftHand Side - Front Motor
 AF_DCMotor motorL1(1); // RightHand Side - Back Motor
 AF_DCMotor motorL2(4); // LeftHand Side - Back Motor
-
 
 int distance;
 long duration;
@@ -54,7 +51,6 @@ void loop() {
      delay(1000); 
    }
 }
-
 
 long data(){
   digitalWrite(trigpin, LOW);
