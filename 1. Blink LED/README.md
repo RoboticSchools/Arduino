@@ -6,16 +6,36 @@ void setup()
 
 2. pinMode(13, OUTPUT): This function sets the specified pin as an output. In this case, we are using pin 13 as an output for the LED.
 
+```python
+pinMode(13, OUTPUT);
+```
+
 3. void loop(): This is the main loop of the code, where the program continuously runs until the board is powered off.
+
+```python
+void loop()
+```
 
 4. digitalWrite(13, HIGH): This function turns on the LED connected to pin 13. The HIGH value means that the pin is set to 5 volts, which is the same as turning on the LED.
 
+```python
+digitalWrite(13, HIGH);
+```
+
 5. delay(1000): This function causes the program to wait for 1000 milliseconds (1 second).
+
+```python
+delay(1000);
+```
 
 6. digitalWrite(13, LOW): This function turns off the LED connected to pin 13. The LOW value means that the pin is set to 0 volts, which is the same as turning off the LED.
 
-7. The code then repeats the process, turning the LED on and off continuously with 1 second delays in between each change.
+```python
+digitalWrite(13, LOW);
+```
 
+7. The code then repeats the process, turning the LED on and off continuously with 1 second delays in between each change.
+8. And the final code should look like this.
 ```python
 void setup() {
   pinMode(13, OUTPUT); // set pin 13 as an output
