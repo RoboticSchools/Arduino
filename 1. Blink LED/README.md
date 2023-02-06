@@ -1,3 +1,5 @@
+# Arduino - 1. Blink LED
+
 1. void setup(): This is the setup function, where we configure the initial settings for the Arduino board. In this code, we use the pinMode function to set the pin 13 as an output.
 
 ```python
