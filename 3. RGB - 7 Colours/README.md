@@ -1,3 +1,6 @@
+# Arduino - 3. RGB 7 Colours
+
+
 1. ***int redPin = 9:*** This line defines the redPin as 9, which is the pin that will be used to control the red LED.
 
 ```python
