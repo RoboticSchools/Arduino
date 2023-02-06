@@ -1,5 +1,9 @@
 1. void setup(): This is the setup function, where we configure the initial settings for the Arduino board. In this code, we use the pinMode function to set the pin 13 as an output.
 
+```python
+void setup()
+```
+
 2. pinMode(13, OUTPUT): This function sets the specified pin as an output. In this case, we are using pin 13 as an output for the LED.
 
 3. void loop(): This is the main loop of the code, where the program continuously runs until the board is powered off.
