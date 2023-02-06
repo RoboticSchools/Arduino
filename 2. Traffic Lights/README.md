@@ -1,3 +1,5 @@
+# Arduino - 2. Traffic Lights
+
 1. ***int redPin = 9;*** : This line declares the red pin as a constant integer variable and sets it to 9.
 
 ```python
