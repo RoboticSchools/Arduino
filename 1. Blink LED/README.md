@@ -53,7 +53,7 @@ void loop() {
 
 Sure, here is a basic Arduino code for blinking an LED with line-by-line explanation:
 
-```
+```python
 // Define the pin number that the LED is connected to
 int ledPin = 13;
 
