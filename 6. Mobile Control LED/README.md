@@ -1,8 +1,7 @@
 
+Arduino code for Bluetooth controlled LED using Arduino, HC05, and LED:
 
-Sure! Here's an example Arduino code for Bluetooth controlled LED using Arduino, HC05, and LED:
-
-```
+```c++
 #include <SoftwareSerial.h>  // Library for creating software serial ports
 
 SoftwareSerial BTserial(10, 11);  // Create a software serial port using digital pins 10 (RX) and 11 (TX)
@@ -29,22 +28,22 @@ void loop() {
 
 Now, let's go through the code line by line to understand how it works:
 
-```
+```c++
 #include <SoftwareSerial.h>
 ```
 This line includes the SoftwareSerial library, which allows us to create a software serial port.
 
-```
+```c++
 SoftwareSerial BTserial(10, 11);
 ```
 This line creates a software serial port called "BTserial" using digital pins 10 (RX) and 11 (TX). This is where we will receive data from the HC05 Bluetooth module.
 
-```
+```c++
 int ledPin = 9;
 ```
 This line defines the LED pin as pin 9.
 
-```
+```c++
 void setup() {
   BTserial.begin(9600);
   pinMode(ledPin, OUTPUT);
@@ -52,7 +51,7 @@ void setup() {
 ```
 In the setup function, we start the serial communication with the Bluetooth module at a baud rate of 9600, and set the LED pin as an output.
 
-```
+```c++
 void loop() {
   if (BTserial.available()) {
     char data = BTserial.read();
