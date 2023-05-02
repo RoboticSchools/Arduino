@@ -81,7 +81,7 @@ digitalWrite(yellowPin, LOW);
 12. And that's it! This simple code will cause the red, yellow, and green LEDs to turn on and off in a cycle, mimicking a traffic light. 
 The red light will turn on for 3 seconds, the green light will turn on for 3 seconds, and the yellow light will turn on for 1 second, before the cycle repeats.
 
-```python
+```C++
 int redPin = 9;
 int yellowPin = 10;
 int greenPin = 11;
