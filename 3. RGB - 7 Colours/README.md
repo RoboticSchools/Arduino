@@ -78,36 +78,44 @@ In the `setup()` function, we set the digital pins connected to the RGB LED as o
 
 ```C++
 void loop() {
+
+  // Red color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, LOW);
   delay(1000);
   
+  // Green color
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
   delay(1000);
   
+  // Blue color
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, HIGH);
   delay(1000);
-
+  
+  // Yellow color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
   delay(1000);
-
+  
+  // Magenta color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, HIGH);
   delay(1000);
-
+  
+  // Cyan color
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, HIGH);
   delay(1000);
-
+  
+  // White color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, HIGH);
@@ -116,18 +124,18 @@ void loop() {
 ```
 In the `loop()` function, we turn on and off the different combinations of the RGB LED to create the seven different colors. Here's what each section of the code does:
 
-- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, LOW); digitalWrite(bluePin, LOW); delay(1000);`: This section turns on the red LED by setting the red pin to HIGH and the green and blue pins to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
+- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, LOW); digitalWrite(bluePin, LOW); delay(1000);`: This section turns on the `red LED` by setting the red pin to HIGH and the green and blue pins to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
 
-- `digitalWrite(redPin, LOW); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, LOW); delay(1000);`: This section turns on the green LED by setting the green pin to HIGH and the red and blue pins to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
+- `digitalWrite(redPin, LOW); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, LOW); delay(1000);`: This section turns on the `green LED` by setting the green pin to HIGH and the red and blue pins to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
 
-- `digitalWrite(redPin, LOW); digitalWrite(greenPin, LOW); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on the blue LED by setting the blue pin to HIGH and the red and green pins to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
+- `digitalWrite(redPin, LOW); digitalWrite(greenPin, LOW); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on the `blue LED` by setting the blue pin to HIGH and the red and green pins to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
 
-- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, LOW); delay(1000);`: This section turns on both the red and green LEDs by setting the red and green pins to HIGH and the blue pin to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
+- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, LOW); delay(1000);`: This section turns on both the `red and green LEDs` by setting the red and green pins to HIGH and the blue pin to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
 
-- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, LOW); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on both the red and blue LEDs by setting the red and blue pins to HIGH and the green pin to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
+- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, LOW); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on both the `red and blue LEDs` by setting the red and blue pins to HIGH and the green pin to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
 
-- `digitalWrite(redPin, LOW); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on both the green and blue LEDs by setting the green and blue pins to HIGH and the red pin to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
+- `digitalWrite(redPin, LOW); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on both the `green and blue LEDs` by setting the green and blue pins to HIGH and the red pin to LOW. It then waits for one second using the `delay()` function before moving on to the next section of code.
 
-- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on all three LEDs to create white color by setting all three pins to HIGH. It then waits for one second using the `delay()` function before moving back to the start of the loop and repeating the process.
+- `digitalWrite(redPin, HIGH); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on all `three LEDs` to create `white color` by setting all three pins to HIGH. It then waits for one second using the `delay()` function before moving back to the start of the loop and repeating the process.
 
 And that's it! The code continuously loops through these seven sections, creating the seven different colors for the RGB LED.
