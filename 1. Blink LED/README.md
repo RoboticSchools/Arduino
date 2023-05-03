@@ -2,7 +2,7 @@
 
 Here is a simple Arduino code for LED blinking:
 
-```c++
+```C++
 int ledPin = 13;  // Define the LED pin number
 void setup() {
   pinMode(ledPin, OUTPUT);  // Set the LED pin as output
@@ -17,19 +17,19 @@ void loop() {
 
 Now let's explain each line of the code in detail:
 
-```c++
+```C++
 int ledPin = 13;
 ```
 In this line, we declare a variable named `ledPin` of the integer data type and assign the value of `13` to it. This is because the onboard LED on most Arduino boards is connected to digital pin 13.
 
-```c++
+```C++
 void setup() {
   pinMode(ledPin, OUTPUT);
 }
 ```
 In the `setup()` function, we set the `ledPin` as an output pin using the `pinMode()` function. This function takes two arguments: the first is the pin number, and the second is the mode (input or output).
 
-```c++
+```C++
 void loop() {
   digitalWrite(ledPin, HIGH);
   delay(1000);
@@ -48,7 +48,7 @@ That's it! This code will continuously blink the LED connected to pin 13 on your
 
 Sure, here is an Arduino code for an emergency light using red and blue LEDs:
 
-```
+```C++
 int redLedPin = 11;  // Define the red LED pin number
 int blueLedPin = 12; // Define the blue LED pin number
 void setup() {
@@ -67,13 +67,13 @@ void loop() {
 
 Now let's explain each line of the code in detail:
 
-```
+```C++
 int redLedPin = 11;
 int blueLedPin = 12;
 ```
 In these lines, we declare two variables named `redLedPin` and `blueLedPin` of the integer data type and assign the values of `11` and `12` to them, respectively. These values correspond to the digital pins to which the red and blue LEDs are connected.
 
-```
+```C++
 void setup() {
   pinMode(redLedPin, OUTPUT);
   pinMode(blueLedPin, OUTPUT);
@@ -81,7 +81,7 @@ void setup() {
 ```
 In the `setup()` function, we set both `redLedPin` and `blueLedPin` as output pins using the `pinMode()` function. This function takes two arguments: the first is the pin number, and the second is the mode (input or output).
 
-```
+```C++
 void loop() {
   digitalWrite(redLedPin, HIGH);
   digitalWrite(blueLedPin, LOW);
