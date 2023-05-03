@@ -46,7 +46,7 @@ That's it! This code will continuously blink the LED connected to pin 13 on your
 
 # Task 1 - Emergency Lights using RED and BLUE LED's
 
-Sure, here is an Arduino code for an emergency light using red and blue LEDs:
+Here is an Arduino code for an emergency light using red and blue LEDs:
 
 ```C++
 int redLedPin = 11;  // Define the red LED pin number
