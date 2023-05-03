@@ -17,19 +17,19 @@ void loop() {
 
 Now let's explain each line of the code in detail:
 
-```
+```c++
 int ledPin = 13;
 ```
 In this line, we declare a variable named `ledPin` of the integer data type and assign the value of `13` to it. This is because the onboard LED on most Arduino boards is connected to digital pin 13.
 
-```
+```c++
 void setup() {
   pinMode(ledPin, OUTPUT);
 }
 ```
 In the `setup()` function, we set the `ledPin` as an output pin using the `pinMode()` function. This function takes two arguments: the first is the pin number, and the second is the mode (input or output).
 
-```
+```c++
 void loop() {
   digitalWrite(ledPin, HIGH);
   delay(1000);
