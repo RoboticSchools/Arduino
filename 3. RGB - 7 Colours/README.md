@@ -2,7 +2,7 @@
 
 Here's an Arduino code for an RGB LED with three colors
 
-```
+```C++
 int redPin = 9;
 int greenPin = 10;
 int bluePin = 11;
@@ -33,7 +33,7 @@ void loop() {
 
 Let's go through each line of the code and see what it does:
 
-```
+```C++
 int redPin = 9;
 int greenPin = 10;
 int bluePin = 11;
@@ -41,7 +41,7 @@ int bluePin = 11;
 
 This section declares three integer variables `redPin`, `greenPin`, and `bluePin` and assigns them the values 9, 10, and 11, respectively. These values represent the digital pins on the Arduino board that the red, green, and blue LED pins are connected to.
 
-```
+```C++
 void setup() {
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
@@ -51,7 +51,7 @@ void setup() {
 
 In the `setup()` function, we use the `pinMode()` function to set the digital pins connected to the red, green, and blue LED pins as output pins.
 
-```
+```C++
 void loop() {
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, LOW);
