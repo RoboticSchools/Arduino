@@ -1,52 +1,51 @@
-
-int redPin = 9;
-int greenPin = 10;
-int bluePin = 11;
+int redPin = 11;   // Red pin of RGB LED connected to digital pin 11
+int greenPin = 10; // Green pin of RGB LED connected to digital pin 10
+int bluePin = 9;   // Blue pin of RGB LED connected to digital pin 9
 
 void setup() {
-  pinMode(redPin, OUTPUT);
-  pinMode(greenPin, OUTPUT);
-  pinMode(bluePin, OUTPUT);
+  pinMode(redPin, OUTPUT);   // Set red pin as output
+  pinMode(greenPin, OUTPUT); // Set green pin as output
+  pinMode(bluePin, OUTPUT);  // Set blue pin as output
 }
 
 void loop() {
-  // Red
+  // Red color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, LOW);
   delay(1000);
-  
-  // Green
+
+  // Green color
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
   delay(1000);
-  
-  // Blue
+
+  // Blue color
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, HIGH);
   delay(1000);
-  
-  // Cyan
-  digitalWrite(redPin, LOW);
-  digitalWrite(greenPin, HIGH);
-  digitalWrite(bluePin, HIGH);
-  delay(1000);
-  
-  // Magenta
-  digitalWrite(redPin, HIGH);
-  digitalWrite(greenPin, LOW);
-  digitalWrite(bluePin, HIGH);
-  delay(1000);
-  
-  // Yellow
+
+  // Yellow color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
   delay(1000);
-  
-  // White
+
+  // Magenta color
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
+  // Cyan color
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
+  // White color
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, HIGH);
