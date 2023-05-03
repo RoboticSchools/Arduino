@@ -1,10 +1,10 @@
+int ledPin = 13;  // Define the LED pin number
 void setup() {
-  pinMode(13, OUTPUT); // set pin 13 as an output
+  pinMode(ledPin, OUTPUT);  // Set the LED pin as output
 }
-
 void loop() {
-  digitalWrite(13, HIGH); // turn on the LED
-  delay(1000); // wait for 1 second
-  digitalWrite(13, LOW); // turn off the LED
-  delay(1000); // wait for 1 second
+  digitalWrite(ledPin, HIGH);  // Turn on the LED
+  delay(1000);  // Wait for one second
+  digitalWrite(ledPin, LOW);  // Turn off the LED
+  delay(1000);  // Wait for one second
 }
