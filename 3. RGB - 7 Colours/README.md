@@ -1,124 +1,117 @@
-# Arduino - 3. RGB 7 Colours
+# Arduino 3 - RGB LED 7 Colours 
 
+Here's an Arduino code for an RGB LED with 7 different colors
 
-1. ***int redPin = 9:*** This line defines the redPin as 9, which is the pin that will be used to control the red LED.
+```C++
+int redPin = 11;   // Red pin of RGB LED connected to digital pin 11
+int greenPin = 10; // Green pin of RGB LED connected to digital pin 10
+int bluePin = 9;   // Blue pin of RGB LED connected to digital pin 9
 
-```python
-int redPin = 9;
+void setup() {
+  pinMode(redPin, OUTPUT);   // Set red pin as output
+  pinMode(greenPin, OUTPUT); // Set green pin as output
+  pinMode(bluePin, OUTPUT);  // Set blue pin as output
+}
+
+void loop() {
+  // Red color
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, LOW);
+  delay(1000);
+
+  // Green color
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, LOW);
+  delay(1000);
+
+  // Blue color
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
+  // Yellow color
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, LOW);
+  delay(1000);
+
+  // Magenta color
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
+  // Cyan color
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
+  // White color
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+}
 ```
 
-2. ***int greenPin = 10:*** This line defines the greenPin as 10, which is the pin that will be used to control the green LED.
+Now, let's go through each line of the code:
 
-```python
+```C++
+int redPin = 11;
 int greenPin = 10;
+int bluePin = 9;
 ```
+In these lines, we define three integer variables named `redPin`, `greenPin`, and `bluePin` and assign the values `11`, `10`, and `9` respectively. These values correspond to the digital pins to which the red, green, and blue leads of the RGB LED are connected.
 
-3. ***int bluePin = 11:*** This line defines the bluePin as 11, which is the pin that will be used to control the blue LED.
-
-```python
-int bluePin = 11;
-```
-
-4. ***pinMode(redPin, OUTPUT):*** This function sets the specified redPin as an output.
-
-```python
-pinMode(redPin, OUTPUT);
-```
-
-5. ***pinMode(greenPin, OUTPUT):*** This function sets the specified greenPin as an output.
-
-```python
-pinMode(greenPin, OUTPUT);
-```
-
-6. ***pinMode(bluePin, OUTPUT):*** This function sets the specified bluePin as an output.
-
-```python
-pinMode(bluePin, OUTPUT);
-```
-
-7. ***digitalWrite(redPin, HIGH):*** This function sets the redPin to a high state, which turns on the red LED.
-
-```python
-digitalWrite(redPin, HIGH);
-```
-
-8. ***digitalWrite(greenPin, LOW):*** This function sets the greenPin to a low state, which turns off the green LED.
-
-```python
-digitalWrite(greenPin, LOW);
-```
-
-9. ***digitalWrite(bluePin, LOW):*** This function sets the bluePin to a low state, which turns off the blue LED.
-
-
-```python
-digitalWrite(bluePin, LOW);
-```
-
-10. ***delay(1000):*** This function causes the program to wait for 1000 milliseconds.
-
-```python
-delay(1000);
-```
-
-11. The same steps are repeated for the other colors. The different combinations of HIGH and LOW on the redPin, greenPin, 
-and bluePin control the different colors of the RGB LED
-
-```python
-
-int redPin = 9;
-int greenPin = 10;
-int bluePin = 11;
-
+```C++
 void setup() {
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
 }
+```
+In the `setup()` function, we set the digital pins connected to the RGB LED as output pins using the `pinMode()` function.
 
+```C++
 void loop() {
-  // Red
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, LOW);
   delay(1000);
   
-  // Green
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
   delay(1000);
   
-  // Blue
   digitalWrite(redPin, LOW);
   digitalWrite(greenPin, LOW);
   digitalWrite(bluePin, HIGH);
   delay(1000);
-  
-  // Cyan
-  digitalWrite(redPin, LOW);
-  digitalWrite(greenPin, HIGH);
-  digitalWrite(bluePin, HIGH);
-  delay(1000);
-  
-  // Magenta
-  digitalWrite(redPin, HIGH);
-  digitalWrite(greenPin, LOW);
-  digitalWrite(bluePin, HIGH);
-  delay(1000);
-  
-  // Yellow
+
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
   delay(1000);
-  
-  // White
+
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, HIGH);
+  delay(1000);
+
   digitalWrite(redPin, HIGH);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, HIGH);
   delay(1000);
 }
-
 ```
+In the `loop()` function, we turn
