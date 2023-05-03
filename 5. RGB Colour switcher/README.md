@@ -1,56 +1,83 @@
-1. int redPin = 9: This line defines the redPin as 9, which is the pin that will be used to control the red LED.
+# Arduino 5 - RGB Colour switcher
 
-```python
+Here is an Arduino code for RGB random colour switcher using a push button:
 
-```
+```C++
+const int buttonPin = 2;
+const int redPin = 9;
+const int greenPin = 10;
+const int bluePin = 11;
 
-3. int greenPin = 10: This line defines the greenPin as 10, which is the pin that will be used to control the green LED.
-4. int bluePin = 11: This line defines the bluePin as 11, which is the pin that will be used to control the blue LED.
-5. int buttonPin = 7: This line defines the buttonPin as 7, which is the pin that will be used to read the button state.
-6. pinMode(redPin, OUTPUT): This function sets the specified redPin as an output.
-7. pinMode(greenPin, OUTPUT): This function sets the specified greenPin as an output.
-8. pinMode(bluePin, OUTPUT): This function sets the specified bluePin as an output.
-9. pinMode(buttonPin, INPUT_PULLUP): This function sets the specified buttonPin as an input with an internal pull-up resistor.
-10. int buttonState = digitalRead(buttonPin): This line reads the state of the button and stores it in the buttonState variable.
-11. if (buttonState == LOW): This line checks if the button is pressed (LOW state), and if so, enters the code block.
-12. int red = random(255): This line generates a random number between 0 and 255 for the red color.
-13. int green = random(255): This line generates a random number between 0 and 255 for the green color.
-14. int blue = random(255): This line generates a random number between 0 and 255 for the blue color.
-15. analogWrite(redPin, red): This function sets the redPin to the value stored in the red variable, which controls the brightness of the red LED.
-16. analogWrite(greenPin, green): This function sets the greenPin to the value stored in the green variable, which controls the brightness of the green LED.
-17. analogWrite(bluePin, blue): This function sets the bluePin to the value stored in the blue variable, which controls the brightness of the blue LED.
-18. delay(1000): This function pauses the code execution for 1000 milliseconds (1 second), allowing the user to see the new color.
-
-This code will continuously loop and generate random colors for the RGB LED whenever the push button is pressed.
-
-```python
-
-int redPin = 9;
-int greenPin = 10;
-int bluePin = 11;
-int buttonPin = 2;
+int redValue = 0;
+int greenValue = 0;
+int blueValue = 0;
 
 void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
-  pinMode(buttonPin, INPUT_PULLUP);
+  randomSeed(analogRead(0));
 }
 
 void loop() {
-  int buttonState = digitalRead(buttonPin);
-
-  if (buttonState == LOW) {
-    int red = random(0, 255);
-    int green = random(0, 255);
-    int blue = random(0, 255);
-
-    analogWrite(redPin, red);
-    analogWrite(greenPin, green);
-    analogWrite(bluePin, blue);
-
+  if (digitalRead(buttonPin) == LOW) {
+    redValue = random(255);
+    greenValue = random(255);
+    blueValue = random(255);
+    analogWrite(redPin, redValue);
+    analogWrite(greenPin, greenValue);
+    analogWrite(bluePin, blueValue);
     delay(500);
   }
 }
-
 ```
+
+Let's go through each line of the code and see what it does:
+
+```C++
+const int buttonPin = 2;
+const int redPin = 9;
+const int greenPin = 10;
+const int bluePin = 11;
+```
+
+This section declares four integer constants `buttonPin`, `redPin`, `greenPin`, and `bluePin` and assigns them the values 2, 9, 10, and 11, respectively. These values represent the digital pins on the Arduino board that the pushbutton and the three pins of the RGB LED are connected to.
+
+```C++
+int redValue = 0;
+int greenValue = 0;
+int blueValue = 0;
+```
+
+These three integer variables will store the current values for the intensity of the red, green, and blue channels of the RGB LED.
+
+```C++
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+  randomSeed(analogRead(0));
+}
+```
+
+In the `setup()` function, we use the `pinMode()` function to set the digital pins connected to the pushbutton and the three pins of the RGB LED. We also use the `randomSeed()` function to seed the random number generator with a random value based on the analog value of pin 0.
+
+```C++
+void loop() {
+  if (digitalRead(buttonPin) == LOW) {
+    redValue = random(255);
+    greenValue = random(255);
+    blueValue = random(255);
+    analogWrite(redPin, redValue);
+    analogWrite(greenPin, greenValue);
+    analogWrite(bluePin, blueValue);
+    delay(500);
+  }
+}
+```
+
+In the `loop()` function, we use an `if` statement to check if the pushbutton is pressed. If it is, we generate a random value between 0 and 255 for each of the red, green, and blue channels using the `random()` function. We then set the intensity of each channel using the `analogWrite()` function. The `delay()` function is used to add a pause of 500 milliseconds between each change of color.
+
+And that's it! The code continuously loops through these instructions, waiting for the pushbutton to be pressed and then randomly generating a new color for the RGB LED.
