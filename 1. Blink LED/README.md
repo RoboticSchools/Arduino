@@ -1,4 +1,4 @@
-# Aruino 1 - LED Blink
+# Arduino 1 - LED Blink
 
 Sure, here is a simple Arduino code for LED blinking:
 
@@ -40,3 +40,7 @@ void loop() {
 In the `loop()` function, we first turn on the LED by setting the `ledPin` to `HIGH` using the `digitalWrite()` function. We then use the `delay()` function to pause the program for one second before turning off the LED by setting the `ledPin` to `LOW` using `digitalWrite()`. We then use another `delay()` function to pause the program for another one second before repeating the process.
 
 That's it! This code will continuously blink the LED connected to pin 13 on your Arduino board.
+
+
+
+#Task 1 - Emergency Lights using RED and BLUE LED's
