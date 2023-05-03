@@ -59,7 +59,7 @@ We then use an `if` statement to check if `buttonState` is equal to `LOW`. If it
 And that's it! The code continuously loops through these instructions, reading the state of the pushbutton and turning the LED on or off based on the state.
 
 
-# Task 3 - ON/OFF push buttons LED control
+# Task 3 - ON OFF LED Control using Push Buttons
 
 Here is an Arduino code for 2 pushbuttons to control an LED
 
