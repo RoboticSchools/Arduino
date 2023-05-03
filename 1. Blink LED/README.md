@@ -1,6 +1,6 @@
 # Arduino 1 - LED Blink
 
-Sure, here is a simple Arduino code for LED blinking:
+Here is a simple Arduino code for LED blinking:
 
 ```c++
 int ledPin = 13;  // Define the LED pin number
