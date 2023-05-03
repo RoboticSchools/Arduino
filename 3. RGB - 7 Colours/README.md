@@ -80,6 +80,7 @@ In the `loop()` function, we use `digitalWrite()` to turn on and off the differe
 
 And that's it! The code continuously loops through these three sections, creating the three different colors for the RGB LED.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Task 2 - RGB LED 7 Colours 
 
@@ -222,3 +223,5 @@ In the `loop()` function, we turn on and off the different combinations of the R
 - `digitalWrite(redPin, HIGH); digitalWrite(greenPin, HIGH); digitalWrite(bluePin, HIGH); delay(1000);`: This section turns on all `three LEDs` to create `white color` by setting all three pins to HIGH. It then waits for one second using the `delay()` function before moving back to the start of the loop and repeating the process.
 
 And that's it! The code continuously loops through these seven sections, creating the seven different colors for the RGB LED.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
