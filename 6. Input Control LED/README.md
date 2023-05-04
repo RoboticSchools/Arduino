@@ -66,7 +66,9 @@ Similarly, if the command sent by the user is '0', we set the digital pin connec
 
 And that's it! The code continuously loops through these instructions, waiting for the user to send commands via the serial monitor to turn the LED on or off.
 
-# Task 5 - 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Task 4 - Input control RGB LED
 
 Here is an Arduino code that controls the RGB LED 7 colors based on the input received from the serial monitor.
 
