@@ -104,13 +104,13 @@ void loop() {
     } else if (data == 0) {
       digitalWrite(ledPin, LOW); // Turn off the LED
     } else if (data > 2) {
-      analogWrite(ledPin, data);
+      analogWrite(ledPin, data); // Brightness control 
     }
   }
 }
 ```
 
-However, if the received data is greater than 2, we use the analogWrite() function to set the brightness of the LED. This is because the analogWrite() function is used for pulse-width modulation (PWM), which allows us to control the brightness of an LED by changing the duty cycle of a square wave.
+However, if the received data is greater than 2, we use the `analogWrite()` function to set the `brightness of the LED`. This is because the analogWrite() function is used for `pulse-width modulation (PWM)`, which allows us to control the brightness of an LED.
 
 So, if the received data is greater than 2, we assume that the mobile app has sent a value between 3 and 255, which represents the brightness level of the LED. We then use the analogWrite() function to set the LED brightness to the received value.
 
