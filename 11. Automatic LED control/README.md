@@ -9,6 +9,7 @@ const int ldrPin = 8;
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  // Set the LDR pin as an input
   pinMode(ldrPin,INPUT);
 }
 
@@ -37,6 +38,7 @@ In this line, we define a constant variable `ldrPin` to hold the pin number for 
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  // Set the LDR pin as an input
   pinMode(ldrpin,INPUT);
 }
 ```
@@ -75,6 +77,7 @@ const int ldrPin = 8;
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  // Set the LDR pin as an input
   pinMode(ldrPin,INPUT);
   // Set the LED pin as an output pin
   pinMode(ledPin, OUTPUT);
@@ -113,6 +116,7 @@ In this line, we define two constant variables `ledPin` and `ldrPin` to hold the
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  // Set the LDR pin as an input
   pinMode(ldrPin,INPUT);
   // Set the LED pin as an output pin
   pinMode(ledPin, OUTPUT);
