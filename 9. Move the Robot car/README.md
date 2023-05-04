@@ -8,7 +8,6 @@ Here is an Arduino code to rotate a DC motor :
 AF_DCMotor motor(1); // Create a DC motor object with motor number 1
 
 void setup() {
-  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
   motor.setSpeed(255); // Set the motor speed to the maximum (255)
 }
 
@@ -36,12 +35,11 @@ The next line creates an instance of the AF_DCMotor class with the motor number 
 
 ```C++
 void setup() {
-  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
   motor.setSpeed(255); // Set the motor speed to the maximum (255)
 }
 ```
 
-The setup() function is called once at the beginning of the program. It initializes the serial communication with a baud rate of 9600 and sets the motor speed to its maximum value of 255 using the setSpeed() method.
+The setup() function is called once at the beginning of the program. Sets the motor speed to its maximum value of 255 using the setSpeed() method.
 
 ```C++
 void loop() {
