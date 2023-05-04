@@ -1,71 +1,74 @@
 # Arduino 7 - Mobile Control LED 
 
-Arduino code for Bluetooth controlled LED using Arduino, HC05, and LED:
+Here's an Arduino code for mobile controlled LED using Bluetooth module HC-05. The code reads data in an integer format, and turns on or off the LED based on the received value.
 
-```c++
-#include <SoftwareSerial.h>  // Library for creating software serial ports
+```C++
+// Include required libraries
+#include <SoftwareSerial.h>
 
-SoftwareSerial BTserial(10, 11);  // Create a software serial port using digital pins 10 (RX) and 11 (TX)
-
-int ledPin = 9;  // Define the LED pin
+// Define pin numbers for LED and Bluetooth module
+int ledPin = 13;
+SoftwareSerial BTSerial(2, 3); // RX, TX
 
 void setup() {
-  BTserial.begin(9600);  // Start the serial communication with the Bluetooth module at a baud rate of 9600
-  pinMode(ledPin, OUTPUT);  // Set the LED pin as an output
+  // Set the LED pin as output
+  pinMode(ledPin, OUTPUT);
+
+  // Set up the Bluetooth module with baud rate of 9600
+  BTSerial.begin(9600);
 }
 
 void loop() {
-  if (BTserial.available()) {  // Check if data is available on the serial port
-    char data = BTserial.read();  // Read the data from the serial port
-    
-    if (data == '1') {  // If the data received is '1'
-      digitalWrite(ledPin, HIGH);  // Turn on the LED
-    } else if (data == '0') {  // If the data received is '0'
-      digitalWrite(ledPin, LOW);  // Turn off the LED
+  // Check if there is any data available from the mobile app
+  if (BTSerial.available()) {
+    // Read the data in integer format
+    int data = BTSerial.parseInt();
+
+    // Check if the received data is 1 or 0
+    if (data == 1) {
+      digitalWrite(ledPin, HIGH); // Turn on the LED
+    } else if (data == 0) {
+      digitalWrite(ledPin, LOW); // Turn off the LED
     }
   }
 }
 ```
 
-Now, let's go through the code line by line to understand how it works:
+Now let's go through the code line by line to understand it better:
 
-```c++
+```C++
 #include <SoftwareSerial.h>
 ```
-This line includes the SoftwareSerial library, which allows us to create a software serial port.
+This line includes the SoftwareSerial library, which allows serial communication on other digital pins of the Arduino besides the hardware serial port.
 
-```c++
-SoftwareSerial BTserial(10, 11);
+```C++
+int ledPin = 13;
+SoftwareSerial BTSerial(2, 3); // RX, TX
 ```
-This line creates a software serial port called "BTserial" using digital pins 10 (RX) and 11 (TX). This is where we will receive data from the HC05 Bluetooth module.
+These two lines define the pin numbers for the LED and the Bluetooth module. Pin 13 is used for the LED, while pins 10 and 11 are used for the RX and TX of the Bluetooth module respectively.
 
-```c++
-int ledPin = 9;
-```
-This line defines the LED pin as pin 9.
-
-```c++
+```C++
 void setup() {
-  BTserial.begin(9600);
   pinMode(ledPin, OUTPUT);
+  BTSerial.begin(9600);
 }
 ```
-In the setup function, we start the serial communication with the Bluetooth module at a baud rate of 9600, and set the LED pin as an output.
+In the `setup()` function, we set the LED pin as output using the `pinMode()` function. We also set up the Bluetooth module with a baud rate of 9600 using the `begin()` function of the `SoftwareSerial` library.
 
-```c++
+```C++
 void loop() {
-  if (BTserial.available()) {
-    char data = BTserial.read();
-    if (data == '1') {
+  if (BTSerial.available()) {
+    int data = BTSerial.parseInt();
+    if (data == 1) {
       digitalWrite(ledPin, HIGH);
-    } else if (data == '0') {
+    } else if (data == 0) {
       digitalWrite(ledPin, LOW);
     }
   }
 }
 ```
-In the loop function, we check if there is any data available on the serial port. If there is, we read the data and store it in the "data" variable.
+In the `loop()` function, we first check if there is any data available from the mobile app using the `available()` function of the `SoftwareSerial` library. If there is data available, we read it in integer format using the `parseInt()` function.
 
-If the data received is '1', we turn on the LED by setting the LED pin to HIGH. If the data received is '0', we turn off the LED by setting the LED pin to LOW.
+We then check if the received data is 1 or 0 using the `if-else` statements. If the data is 1, we turn on the LED using the `digitalWrite()` function and set the LED pin to `HIGH`. If the data is 0, we turn off the LED by setting the LED pin to `LOW`. 
 
-So, this code allows you to control an LED using a Bluetooth module (HC05) and a smartphone app or other Bluetooth device that can send data. When the app sends the character '1', the LED turns on, and when it sends '0', the LED turns off.
+That's it! This code should allow you to control an LED with a mobile app using a Bluetooth module.
