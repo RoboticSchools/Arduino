@@ -1,6 +1,11 @@
+#include <SoftwareSerial.h>
+
 // Define the pins for the motor
 int motorPin1 = 8;
 int motorPin2 = 9;
+
+// Create a software serial object
+SoftwareSerial mySerial(2, 3);
 
 void setup() {
   // Set the motor pins as output
@@ -8,12 +13,12 @@ void setup() {
   pinMode(motorPin2, OUTPUT);
 
   // Start the serial communication
-  Serial.begin(9600);
+  mySerial.begin(9600);
 }
 
 void loop() {
-  if (Serial.available() > 0) {
-    char input = Serial.read();
+  if (mySerial.available() > 0) {
+    char input = mySerial.read();
 
     if (input == 'F') {
       // Turn the motor clockwise (forward)
