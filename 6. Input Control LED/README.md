@@ -2,7 +2,7 @@
 
 Here's an Arduino code for controlling an LED using serial monitor input:
 
-```C++
+```arduino
 int ledPin = 13;
 char command;
 
