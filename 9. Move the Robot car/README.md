@@ -1,6 +1,62 @@
 # Arduino 9 - Move the Robot Car
 
-Here's an example Arduino code for a four-wheel drive robot car using the AF_Motor library to move in four directions :
+Here is an Arduino code to rotate a DC motor :
+
+```C++
+#include <AFMotor.h> // Include the AFMotor library
+
+AF_DCMotor motor(1); // Create a DC motor object with motor number 1
+
+void setup() {
+  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
+  motor.setSpeed(255); // Set the motor speed to the maximum (255)
+}
+
+void loop() {
+  motor.run(FORWARD); // Rotate the motor forward
+  delay(1000); // Wait for 1 second
+  motor.run(BACKWARD); // Rotate the motor backward
+  delay(1000); // Wait for 1 second
+}
+```
+
+Explanation:
+
+```C++
+#include <AFMotor.h> // Include the AFMotor library
+```
+
+The first line of code includes the AFMotor library which provides the necessary functions to control the DC motor.
+
+```C++
+AF_DCMotor motor(1); // Create a DC motor object with motor number 1
+```
+
+The next line creates an instance of the AF_DCMotor class with the motor number 1. This class provides methods to control the DC motor connected to the specific motor number.
+
+```C++
+void setup() {
+  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
+  motor.setSpeed(255); // Set the motor speed to the maximum (255)
+}
+```
+
+The setup() function is called once at the beginning of the program. It initializes the serial communication with a baud rate of 9600 and sets the motor speed to its maximum value of 255 using the setSpeed() method.
+
+```C++
+void loop() {
+  motor.run(FORWARD); // Rotate the motor forward
+  delay(1000); // Wait for 1 second
+  motor.run(BACKWARD); // Rotate the motor backward
+  delay(1000); // Wait for 1 second
+}
+```
+
+The loop() function is called repeatedly after the setup() function. It first rotates the motor forward using the run() method with the FORWARD direction constant, and then waits for 1 second using the delay() function. It then rotates the motor backward using the run() method with the BACKWARD direction constant and waits for 1 second again. This loop continues indefinitely, causing the motor to rotate back and forth continuously.
+
+Overall, this code uses the AFMotor library to control the direction and speed of a DC motor connected to the Arduino.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ```C++
 #include <AFMotor.h> // include the AF_Motor library
