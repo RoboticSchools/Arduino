@@ -9,6 +9,7 @@ const int ldrPin = 8;
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  pinMode(ldrPin,INPUT);
 }
 
 void loop() {
@@ -36,6 +37,7 @@ In this line, we define a constant variable `ldrPin` to hold the pin number for 
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  pinMode(ldrpin,INPUT);
 }
 ```
 The `setup()` function is called once when the program starts. Here, we start the serial communication with the computer at a baud rate of 9600 bits per second.
@@ -73,6 +75,7 @@ const int ldrPin = 8;
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  pinMode(ldrPin,INPUT);
   // Set the LED pin as an output pin
   pinMode(ledPin, OUTPUT);
 }
@@ -110,6 +113,7 @@ In this line, we define two constant variables `ledPin` and `ldrPin` to hold the
 void setup() {
   // Start the serial communication at 9600 bits per second
   Serial.begin(9600);
+  pinMode(ldrPin,INPUT);
   // Set the LED pin as an output pin
   pinMode(ledPin, OUTPUT);
 }
