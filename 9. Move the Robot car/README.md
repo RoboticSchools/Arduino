@@ -50,7 +50,7 @@ void loop() {
 }
 ```
 
-The loop() function is called repeatedly after the setup() function. It first rotates the motor forward using the run() method with the FORWARD direction constant, and then waits for 1 second using the delay() function. It then rotates the motor backward using the run() method with the BACKWARD direction constant and waits for 1 second again. This loop continues indefinitely, causing the motor to rotate back and forth continuously.
+The `loop()` function is called repeatedly after the setup() function. It first rotates the motor `forward` using the `run()` method with the FORWARD direction constant, and then waits for 1 second using the `delay()` function. It then rotates the motor `backward` using the `run()` method with the BACKWARD direction constant and waits for 1 second again. This loop continues indefinitely, causing the motor to rotate back and forth continuously.
 
 Overall, this code uses the AFMotor library to control the direction and speed of a DC motor connected to the Arduino.
 
