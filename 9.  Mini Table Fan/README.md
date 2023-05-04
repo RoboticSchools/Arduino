@@ -156,7 +156,7 @@ Note that this code assumes that the DC motor is connected to pins 8 and 9 on th
 
 # Task 2 - Mobile control Mini Table Fan
 
-Sure, here's the modified Arduino code that controls the DC motor using the software serial library with pins 2 and 3 as RX and TX, respectively:
+Arduino code that controls the DC motor using the software serial library with pins 2 and 3 as RX and TX, respectively:
 
 ```C++
 #include <SoftwareSerial.h>
