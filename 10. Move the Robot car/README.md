@@ -1,4 +1,4 @@
-# Arduino 9 - Rotate the DC Motor
+# Arduino 10 - Rotate the DC Motor
 
 Here is an Arduino code to rotate a DC motor :
 
@@ -56,7 +56,7 @@ Overall, this code uses the AFMotor library to control the direction and speed o
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Arduino 9 - Move the Robot Car - 4 Wheel Drive
+# Arduino 10 - Move the Robot Car - 4 Wheel Drive
 
 ```C++
 #include <AFMotor.h> // include the AF_Motor library
