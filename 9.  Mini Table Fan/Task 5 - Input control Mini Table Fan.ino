@@ -6,16 +6,27 @@ void setup() {
   // Set the motor pins as output
   pinMode(motorPin1, OUTPUT);
   pinMode(motorPin2, OUTPUT);
+
+  // Start the serial communication
+  Serial.begin(9600);
 }
 
 void loop() {
-  // Turn the motor clockwise (forward) for 2 seconds
-  digitalWrite(motorPin1, HIGH);
-  digitalWrite(motorPin2, LOW);
-  delay(2000);
+  if (Serial.available() > 0) {
+    char input = Serial.read();
 
-  // Turn the motor counterclockwise (backward) for 2 seconds
-  digitalWrite(motorPin1, LOW);
-  digitalWrite(motorPin2, HIGH);
-  delay(2000);
+    if (input == 'F') {
+      // Turn the motor clockwise (forward)
+      digitalWrite(motorPin1, HIGH);
+      digitalWrite(motorPin2, LOW);
+    } else if (input == 'B') {
+      // Turn the motor counterclockwise (backward)
+      digitalWrite(motorPin1, LOW);
+      digitalWrite(motorPin2, HIGH);
+    } else {
+      // Stop the motor
+      digitalWrite(motorPin1, LOW);
+      digitalWrite(motorPin2, LOW);
+    }
+  }
 }
