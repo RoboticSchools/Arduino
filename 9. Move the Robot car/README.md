@@ -1,22 +1,5 @@
 # Arduiuno 9 - Move the Robot Car
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## What is Arduino Library?
-
-In Arduino coding, a library is a collection of pre-written functions that can be easily incorporated into your sketch. The library code is written in C or C++, and it provides a set of functions that can be called by the user in their sketch to accomplish specific tasks. Libraries can be used to extend the capabilities of the Arduino board, to interface with external hardware, or to simplify complex programming tasks.
-
-Arduino libraries are usually provided in the form of header files (.h) and source files (.cpp), which are stored in a specific directory within the Arduino software installation. To use a library in your sketch, you need to include the library header file at the beginning of your sketch using the `#include` directive.
-
-For example, if you want to use the Servo library to control a servo motor in your Arduino sketch, you would include the library header file at the beginning of your sketch like this:
-
-```
-#include <Servo.h>
-```
-
-This makes the functions provided by the Servo library available to your sketch, so you can use them to control the servo motor. You can then create a Servo object in your sketch, attach it to a pin on your Arduino board, and use the `write()` function to set the angle of the servo motor. The library takes care of all the low-level details of controlling the servo motor, allowing you to focus on the higher-level logic of your sketch.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Here's an example Arduino code for a four-wheel drive robot car using the AF_Motor library to move in four directions :
 
 ```C++
