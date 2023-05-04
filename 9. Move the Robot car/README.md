@@ -1,7 +1,7 @@
 # Arduiuno 9 - Move the Robot Car
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## What is an Library?
+## What is Arduino Library?
 
 In Arduino coding, a library is a collection of pre-written functions that can be easily incorporated into your sketch. The library code is written in C or C++, and it provides a set of functions that can be called by the user in their sketch to accomplish specific tasks. Libraries can be used to extend the capabilities of the Arduino board, to interface with external hardware, or to simplify complex programming tasks.
 
