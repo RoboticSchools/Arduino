@@ -1,4 +1,4 @@
-# Arduiuno 9 - Move the Robot Car
+# Arduino 9 - Move the Robot Car
 
 Here's an example Arduino code for a four-wheel drive robot car using the AF_Motor library to move in four directions :
 
