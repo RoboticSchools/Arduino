@@ -65,3 +65,96 @@ We then use another `if` statement to check if the command sent by the user is '
 Similarly, if the command sent by the user is '0', we set the digital pin connected to the LED to a LOW state using the `digitalWrite()` function and print a message to the serial monitor indicating that the LED is off.
 
 And that's it! The code continuously loops through these instructions, waiting for the user to send commands via the serial monitor to turn the LED on or off.
+
+# Task 5 - 
+
+Here is an Arduino code that controls the RGB LED 7 colors based on the input received from the serial monitor.
+
+```C++
+// Define the pins for the RGB LED
+const int redPin = 9;
+const int greenPin = 10;
+const int bluePin = 11;
+
+void setup() {
+  // Set the pins for the RGB LED as output pins
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+
+  // Start the serial communication
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Check if any data is available in the serial monitor
+  if (Serial.available() > 0) {
+    // Read the incoming data from the serial monitor
+    char input = Serial.read();
+
+    // Control the RGB LED based on the input received
+    
+    if (input == 'R') {
+      // Turn on the red color
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+    } 
+    
+    else if (input == 'G') {
+      // Turn on the green color
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, HIGH);
+      digitalWrite(bluePin, LOW);
+    } 
+    
+    else if (input == 'B') {
+      // Turn on the blue color
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, HIGH);
+    } 
+    
+    else if (input == 'Y') {
+      // Turn on the yellow color
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, HIGH);
+      digitalWrite(bluePin, LOW);
+    } 
+    
+    else if (input == 'M') {
+      // Turn on the magenta color
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, HIGH);
+    } 
+    
+    else if (input == 'C') {
+      // Turn on the cyan color
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, HIGH);
+      digitalWrite(bluePin, HIGH);
+    } 
+    
+    else if (input == 'W') {
+      // Turn on the white color
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, HIGH);
+      digitalWrite(bluePin, HIGH);
+    } 
+    
+    else {
+      // Turn off the RGB LED
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+    }
+  }
+}
+```
+
+In this code, the RGB LED is connected to pins 9, 10, and 11 on the Arduino board. The `setup()` function sets these pins as output pins and starts the serial communication at a baud rate of 9600. 
+
+The `loop()` function checks if any data is available in the serial monitor using the `Serial.available()` function. If there is data available, it reads the incoming data using the `Serial.read()` function.
+
+The code then uses if conditions to determine which color to turn on based on the input received. If the input is 'R', the code turns on the red color by setting the redPin to HIGH and the greenPin and bluePin to LOW. Similarly, if the input is 'G', it turns on the green color, and so on. If the input is not any of the valid color codes, it turns off the RGB LED.
