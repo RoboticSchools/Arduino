@@ -74,6 +74,7 @@ We then check if the received data is 1 or 0 using the `if-else` statements. If 
 That's it! This code should allow you to control an LED with a mobile app using a Bluetooth module.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Mobile control + Brightness control LED
 
 ```C++
 // Include required libraries
