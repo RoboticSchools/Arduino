@@ -55,4 +55,8 @@ void loop() {
   delay(2000);
 }
 ```
-The `loop()` function is called repeatedly while the program is running. Here, we turn the motor clockwise (forward) by setting `motorPin1` to `HIGH` and `motorPin2` to `LOW` for 2 seconds using the `
+The `loop()` function is called repeatedly while the program is running. Here, we turn the motor clockwise (forward) by setting `motorPin1` to `HIGH` and `motorPin2` to `LOW` for 2 seconds using the `digitalWrite()` function, and then turn the motor counterclockwise (backward) by setting `motorPin1` to `LOW` and `motorPin2` to `HIGH` for 2 seconds using the same `digitalWrite()` function. 
+
+Finally, we add a `delay()` function to pause the program execution for 2 seconds between each change in the motor direction. This delay is necessary to give the motor enough time to stop before changing its direction. 
+
+Overall, this code uses the `digitalWrite()` function to set the output pins `motorPin1` and `motorPin2` high or low, which controls the direction of the current flow through the motor and thus its direction of rotation. By using a delay between each change in the motor direction, we ensure that the motor has enough time to stop before changing direction.
