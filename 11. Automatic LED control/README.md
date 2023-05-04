@@ -63,7 +63,7 @@ Finally, we add a delay of 100 milliseconds using the `delay()` function before 
 
 # Arduino 11 - Automatic LED control using LDR sensor
 
-Sure, here is the Arduino code for automatic LED control using an LDR sensor connected to pin 8:
+Arduino code for automatic LED control using an LDR sensor connected to pin 8:
 
 ```C++
 // Define the pin numbers for the LED and LDR sensor
