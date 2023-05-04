@@ -2,7 +2,7 @@
 
 Here's an Arduino code for a piano project using 4 pushbuttons :
 
-```
+```C++
 int buttonPin1 = 2;  // assign pushbutton 1 to digital pin 2
 int buttonPin2 = 3;  // assign pushbutton 2 to digital pin 3
 int buttonPin3 = 4;  // assign pushbutton 3 to digital pin 4
@@ -37,7 +37,7 @@ void loop() {
 
 Explanation of the code line by line:
 
-```
+```C++
 int buttonPin1 = 2;  // assign pushbutton 1 to digital pin 2
 int buttonPin2 = 3;  // assign pushbutton 2 to digital pin 3
 int buttonPin3 = 4;  // assign pushbutton 3 to digital pin 4
@@ -46,7 +46,7 @@ int buttonPin4 = 5;  // assign pushbutton 4 to digital pin 5
 
 These lines define the pin numbers for the four pushbuttons, which are connected to digital pins 2, 3, 4, and 5 respectively.
 
-```
+```C++
 void setup() {
   pinMode(buttonPin1, INPUT_PULLUP);  // set pushbutton 1 as input with internal pull-up resistor enabled
   pinMode(buttonPin2, INPUT_PULLUP);  // set pushbutton 2 as input with internal pull-up resistor enabled
@@ -57,7 +57,7 @@ void setup() {
 
 The `setup()` function is called only once at the beginning of the program. Here, we set the pins connected to the pushbuttons as inputs with the internal pull-up resistors enabled. This means that when the pushbuttons are not being pressed, the pins will read HIGH, and when they are pressed, they will read LOW.
 
-```
+```C++
 void loop() {
   if (digitalRead(buttonPin1) == LOW) {  // if pushbutton 1 is pressed
     tone(8, 262, 100);  // play note C4 on pin 8 for 100ms
