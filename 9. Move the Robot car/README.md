@@ -1,4 +1,4 @@
-# Arduino 9 - Move the Robot Car
+# Arduino 9 - Rotate the DC Motor
 
 Here is an Arduino code to rotate a DC motor :
 
@@ -57,6 +57,8 @@ The loop() function is called repeatedly after the setup() function. It first ro
 Overall, this code uses the AFMotor library to control the direction and speed of a DC motor connected to the Arduino.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Arduino 9 - Move the Robot Car - 4 Wheel Drive
 
 ```C++
 #include <AFMotor.h> // include the AF_Motor library
