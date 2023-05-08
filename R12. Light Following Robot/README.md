@@ -1,3 +1,78 @@
+```C++
+// Include the AFMotor library
+#include <AFMotor.h>
+
+// Define the input pins for the left and right sensors
+#define left A5
+#define right A0 
+
+// Create instances of the AF_DCMotor class for the four motors
+AF_DCMotor motorR1(2); 
+AF_DCMotor motorR2(1);  
+AF_DCMotor motorL1(3); 
+AF_DCMotor motorL2(4); 
+
+// This function is called once when the Arduino is first turned on or reset
+void setup() 
+{
+  // Set the pinMode for the left and right sensors to INPUT
+  pinMode(left,INPUT);
+  pinMode(right,INPUT);
+
+  // Start the Serial communication at a baud rate of 9600
+  Serial.begin(9600);
+  
+  // Set the speed of all four motors to 150
+  motorR1.setSpeed(150);
+  motorR2.setSpeed(150);
+  motorL1.setSpeed(150);
+  motorL2.setSpeed(150);  
+}
+
+// This function runs repeatedly after setup() is called
+void loop()
+{
+  // Print the values of the left and right sensors to the Serial Monitor
+  Serial.println(digitalRead(left));
+  Serial.println(digitalRead(right));
+ 
+  // If the left sensor detects more light, turn left
+  if(digitalRead(left)==LOW && digitalRead(right)==HIGH)
+  { 
+    motorR1.run(FORWARD);
+    motorR2.run(FORWARD);   
+    motorL1.run(BACKWARD);
+    motorL2.run(BACKWARD); 
+  }
+  
+  // If the right sensor detects more light, turn right
+  else if(digitalRead(left)==HIGH && digitalRead(right)==LOW)
+  {
+    motorR1.run(BACKWARD);
+    motorR2.run(BACKWARD);
+    motorL1.run(FORWARD);     
+    motorL2.run(FORWARD);  
+  }
+  
+  // If both sensors detect equal light levels, move forward
+  else if(digitalRead(left)==LOW && digitalRead(right)==LOW)
+  {
+    motorR1.run(FORWARD);
+    motorR2.run(FORWARD);
+    motorL1.run(FORWARD);   
+    motorL2.run(FORWARD);
+  }
+
+  // If both sensors detect no light, stop moving
+  else if(digitalRead(left)==HIGH && digitalRead(right)==HIGH)
+  {  
+    motorR1.run(RELEASE);
+    motorR2.run(RELEASE);  
+    motorL1.run(RELEASE);
+    motorL2.run(RELEASE);
+  } 
+}
+```
 
 ```C++
 #include <AFMotor.h>
@@ -96,12 +171,12 @@ void loop()
 
 #### *The following code use conditional statements to control the direction of the robot based on the sensor readings.*
 
-If the left sensor detects more light than the right sensor, the robot turns left. The `run()` function of the `AF_DCMotor` class is used to control the direction and speed of each motor. In this case, the right motors (`motorR1` and `motorR2`) are set to move forward, while the left motors (`motorL1` and `motorL2`) are set to move backward. This causes the robot to turn left.
+1. If the left sensor detects more light than the right sensor, the robot turns left. The `run()` function of the `AF_DCMotor` class is used to control the direction and speed of each motor. In this case, the right motors (`motorR1` and `motorR2`) are set to move forward, while the left motors (`motorL1` and `motorL2`) are set to move backward. This causes the robot to turn left.
 
-If the right sensor detects more light than the left sensor, the robot turns right. In this case, the right motors are set to move backward, while the left motors are set to move forward. This causes the robot to turn right.
+2. If the right sensor detects more light than the left sensor, the robot turns right. In this case, the right motors are set to move backward, while the left motors are set to move forward. This causes the robot to turn right.
 
-If both sensors detect equal light levels, the robot moves forward. In this case, all four motors are set to move forward.
+3. If both sensors detect equal light levels, the robot moves forward. In this case, all four motors are set to move forward.
 
-If both sensors detect no light, the robot stops moving. In this case, the `RELEASE` command is used to stop all four motors.
+4. If both sensors detect no light, the robot stops moving. In this case, the `RELEASE` command is used to stop all four motors.
 
 Overall, this code implements a simple line-following behavior where the robot tries to keep moving forward while following a line by adjusting its direction based on the sensor readings.
