@@ -22,7 +22,7 @@ void loop() {
   // Check if there is any data available from the mobile app
   if (BTSerial.available()) {
     // Read the data in integer format
-    int data = BTSerial.parseInt();
+    int data = BTSerial.read();
 
     // Check if the received data is 1 or 0
     if (data == 1) {
@@ -58,7 +58,7 @@ In the `setup()` function, we set the LED pin as output using the `pinMode()` fu
 ```C++
 void loop() {
   if (BTSerial.available()) {
-    int data = BTSerial.parseInt();
+    int data = BTSerial.read();
     if (data == 1) {
       digitalWrite(ledPin, HIGH);
     } else if (data == 0) {
@@ -67,7 +67,7 @@ void loop() {
   }
 }
 ```
-In the `loop()` function, we first check if there is any data available from the mobile app using the `available()` function of the `SoftwareSerial` library. If there is data available, we read it in integer format using the `parseInt()` function.
+In the `loop()` function, we first check if there is any data available from the mobile app using the `available()` function of the `SoftwareSerial` library. If there is data available, we read it using the `read()` function.
 
 We then check if the received data is 1 or 0 using the `if-else` statements. If the data is 1, we turn on the LED using the `digitalWrite()` function and set the LED pin to `HIGH`. If the data is 0, we turn off the LED by setting the LED pin to `LOW`. 
 
@@ -96,7 +96,7 @@ void loop() {
   // Check if there is any data available from the mobile app
   if (BTSerial.available()) {
     // Read the data in integer format
-    int data = BTSerial.parseInt();
+    int data = BTSerial.read();
 
     // Check if the received data is 1 or 0
     if (data == 1) {
