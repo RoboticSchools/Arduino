@@ -1,3 +1,4 @@
+```C++
 #inlude<Servo.h>
 Servo s;
 int angle = 90
@@ -26,3 +27,4 @@ void loop()
     delay(50);
   }
 }
+```
