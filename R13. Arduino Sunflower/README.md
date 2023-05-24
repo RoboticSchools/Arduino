@@ -20,7 +20,7 @@ void loop()
     Servo.write(a);
     delay(50);
   }
-  if(west == 0 $$ angle>=0)
+  if(west == 0 && angle>=0)
   {
     a = a-1;
     Servo.write(a);
